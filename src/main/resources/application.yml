@@ -1,0 +1,17 @@
+server:
+  port: 11500
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://192.168.2.56:11500/eureka
+      defaultZone: http://10.18.33.132.56:11500/eureka
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    enable-self-preservation: true
+    log-identity-headers: true
+    peer-eureka-status-refresh-time-interval-ms: 30
+    eviction-interval-timer-in-ms: 3000
